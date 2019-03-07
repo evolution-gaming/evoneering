@@ -3,6 +3,7 @@ import "./App.css";
 import { TopBar } from "./TopBar/TopBar";
 import { Tag } from "./Tag/Tag";
 import { Button, ButtonTheme } from "./Button/Button";
+import { VideoContainer } from "./VideoContainer/VideoContainer";
 
 class App extends React.PureComponent {
     render() {
@@ -78,17 +79,7 @@ class App extends React.PureComponent {
                     </div>
                 </div>
 
-                <div className="videoContainer">
-                    <div className="contentContainer">
-                        <div className="slogan">
-                            Our conference talks
-                        </div>
-                        <div className="videoItem"></div>
-                        <div className="videoItem"></div>
-                        <div className="videoItem"></div>
-                        <div className="videoItem"></div>
-                    </div>
-                </div>
+                <VideoContainer />
 
                 <div className="ossContainer">
                     <div className="contentContainer">

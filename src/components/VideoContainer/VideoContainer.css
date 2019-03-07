@@ -1,0 +1,36 @@
+.videoContainer {
+    background: #000000;
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+}
+
+.videoContainer .popup {
+    position: fixed;
+    width: 61vw;
+    height: 61vh;
+    left: 50vw;
+    top: 50vh;
+    transform: translate(-50%, -50%);
+    border: rgba(0, 0, 0, 0.5) 10000px solid; 
+}
+
+.videoContainer .slogan {
+    margin-top: 100px;
+    margin-bottom: 65px;
+}
+
+.videoItem {
+    display: inline-block;
+    height: 450px;
+    width: 49%;
+    background: #fff;
+    margin-bottom: 2%;
+    cursor: pointer;
+}
+.videoItem iframe {
+    pointer-events: none;
+}
+.videoItem:nth-of-type(even) {
+    margin-right: 2%;
+}

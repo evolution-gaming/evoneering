@@ -79,31 +79,6 @@
     align-items: center;
 }
 
-.videoContainer {
-    background: #000000;
-    min-height: 500px;
-    display: flex;
-    justify-content: center;
-}
-
-.videoContainer .slogan {
-    margin-top: 100px;
-    margin-bottom: 65px;
-}
-
-.videoItem {
-    display: inline-block;
-    height: 450px;
-    width: 49%;
-    background: #fff;
-    margin-bottom: 2%;
-
-}
-
-.videoItem:nth-of-type(even) {
-    margin-right: 2%;
-}
-
 .highlightContainer {
     background: #000;
     height: 320px;
