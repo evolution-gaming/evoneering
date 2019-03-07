@@ -33,6 +33,10 @@ export async function takeScreenshot(props: TakeScreenshotProps) {
     await page.setViewport({ width: pageWidth, height: pageHeight });
     const contentForScreenshot = htmlForScreenshot(html);
     await page.setContent(contentForScreenshot);
+
+     // https://github.com/GoogleChrome/puppeteer/issues/1751
+    await page.evaluate(() => new Promise((resolve) => requestAnimationFrame(resolve)));
+
     const elementHandle = await page.$(selector);
 
     if (withHtml) {

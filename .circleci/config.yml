@@ -30,7 +30,7 @@ jobs:
           git config --global push.default current
           git add .
           git commit -m "CI. Update snapshot"
-          git push -q https://${GITHUB_PERSONAL_TOKEN}@github.com/zaqqaz/progressive-tests.git ${CIRCLE_BRANCH}
+          git push -q https://${GITHUB_PERSONAL_TOKEN}@github.com/evolution-gaming/evoneering.git ${CIRCLE_BRANCH}
   test:
     docker:
       - image: circleci/node:latest-browsers
