@@ -84,7 +84,7 @@ export class Map extends React.PureComponent<MapProps, MapState> {
         return (
             <>
                 <div className="map">
-                    <img className="mapEvoLogo" src="/Evo_logo_2rows_R_CMYK.jpg" />
+                    <img className="mapEvoLogo" src="/evoLogo.svg" />
                     <div className="mapBody">
                         <img className="mapBackground" src="/map.svg" width="100%" />
                         <div className="mapOverlay">
