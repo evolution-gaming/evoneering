@@ -1,0 +1,17 @@
+.map {
+    padding-top: 6em;
+}
+.mapEvoLogo {
+    height: 5em;
+}
+.mapBody {
+    position: relative;
+}
+.mapBackground {
+}
+.mapOverlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}

@@ -6,6 +6,7 @@ import { TagContainer } from "./Tag/TagContainer";
 import { Repos } from "./Repos/Repos";
 import { HighlightInfo } from "./HighlightInfo/HighlightInfo";
 import { JournalContainer } from "./Journal/JournalContainer";
+import { Map } from "./Map/Map";
 import { CardContainer } from "./Card/CardContainer";
 
 class App extends React.PureComponent {
@@ -14,7 +15,7 @@ class App extends React.PureComponent {
             <div className="App">
                 <div className="topBarContainer">
                     <div className="contentContainer">
-                        <TopBar/>
+                        <TopBar />
                     </div>
                 </div>
                 <div className="mainInfoContainer">
@@ -24,26 +25,24 @@ class App extends React.PureComponent {
                     <div className={"VideoOverlay"} />
                     <div className="contentContainer">
                         <div className="slogan">
-                            We are the leading provider of B2B gaming solutions which believe in sharing our
-                            technology leadership with the community.
+                            We are the leading provider of B2B gaming solutions which believe in sharing our technology
+                            leadership with the community.
                         </div>
 
                         <div className="tags">
-                            <TagContainer/>
+                            <TagContainer />
                         </div>
                     </div>
                 </div>
                 <div className="ossContainer">
                     <div className="contentContainer">
-                        <div className="slogan">
-                            Open source projects we author or contribute to
-                        </div>
+                        <div className="slogan">Open source projects we author or contribute to</div>
 
-                        <Repos/>
+                        <Repos />
 
                         <div className="buttonContainer">
                             <Button
-                                onClick={() => window.open('https://github.com/evolution-gaming', '_blank')}
+                                onClick={() => window.open("https://github.com/evolution-gaming", "_blank")}
                                 label={"View All OpenSource Projects"}
                                 theme={ButtonTheme.Light}
                             />
@@ -55,11 +54,9 @@ class App extends React.PureComponent {
 
                 <div className="journalContainer">
                     <div className="contentContainer">
-                        <div className="slogan">
-                            Journal
-                        </div>
+                        <div className="slogan">Journal</div>
 
-                        <JournalContainer/>
+                        <JournalContainer />
 
                         {/*<div className="buttonContainer">*/}
                         {/*<Button*/}
@@ -71,116 +68,16 @@ class App extends React.PureComponent {
                     </div>
                 </div>
 
-                <HighlightInfo/>
+                <HighlightInfo />
 
                 <div className="mapContainer">
                     <div className="contentContainer">
-
-                        <div className="slogan">
-                            Offices
-                        </div>
-
-                        <div className="buttons">
-                            <Button
-                                onClick={() => window.open('https://github.com/evolution-gaming', '_blank')}
-                                label={"Riga (Latvia)"}
-                                theme={ButtonTheme.Light}
-                            />
-
-                            <Button
-                                onClick={() => window.open('https://github.com/evolution-gaming', '_blank')}
-                                label={"Riga (Latvia)"}
-                                theme={ButtonTheme.Light}
-                            />
-
-                            <Button
-                                onClick={() => window.open('https://github.com/evolution-gaming', '_blank')}
-                                label={"Riga (Latvia)"}
-                                theme={ButtonTheme.Light}
-                            />
-
-                            <Button
-                                onClick={() => window.open('https://github.com/evolution-gaming', '_blank')}
-                                label={"Riga (Latvia)"}
-                                theme={ButtonTheme.Light}
-                            />
-                            <Button
-                                onClick={() => window.open('https://github.com/evolution-gaming', '_blank')}
-                                label={"Riga (Latvia)"}
-                                theme={ButtonTheme.Light}
-                            />
-
-                            <Button
-                                onClick={() => window.open('https://github.com/evolution-gaming', '_blank')}
-                                label={"Riga (Latvia)"}
-                                theme={ButtonTheme.Light}
-                            />
-
-                            <Button
-                                onClick={() => window.open('https://github.com/evolution-gaming', '_blank')}
-                                label={"Riga (Latvia)"}
-                                theme={ButtonTheme.Light}
-                            />
-
-                            <Button
-                                onClick={() => window.open('https://github.com/evolution-gaming', '_blank')}
-                                label={"Riga (Latvia)"}
-                                theme={ButtonTheme.Light}
-                            />
-                            <Button
-                                onClick={() => window.open('https://github.com/evolution-gaming', '_blank')}
-                                label={"Riga (Latvia)"}
-                                theme={ButtonTheme.Light}
-                            />
-
-                            <Button
-                                onClick={() => window.open('https://github.com/evolution-gaming', '_blank')}
-                                label={"Riga (Latvia)"}
-                                theme={ButtonTheme.Light}
-                            />
-
-                            <Button
-                                onClick={() => window.open('https://github.com/evolution-gaming', '_blank')}
-                                label={"Riga (Latvia)"}
-                                theme={ButtonTheme.Light}
-                            />
-
-                            <Button
-                                onClick={() => window.open('https://github.com/evolution-gaming', '_blank')}
-                                label={"Riga (Latvia)"}
-                                theme={ButtonTheme.Light}
-                            />
-                            <Button
-                                onClick={() => window.open('https://github.com/evolution-gaming', '_blank')}
-                                label={"Riga (Latvia)"}
-                                theme={ButtonTheme.Light}
-                            />
-
-                            <Button
-                                onClick={() => window.open('https://github.com/evolution-gaming', '_blank')}
-                                label={"Riga (Latvia)"}
-                                theme={ButtonTheme.Light}
-                            />
-
-                            <Button
-                                onClick={() => window.open('https://github.com/evolution-gaming', '_blank')}
-                                label={"Riga (Latvia)"}
-                                theme={ButtonTheme.Light}
-                            />
-
-                            <Button
-                                onClick={() => window.open('https://github.com/evolution-gaming', '_blank')}
-                                label={"Riga (Latvia)"}
-                                theme={ButtonTheme.Light}
-                            />
-                        </div>
+                        <Map />
                     </div>
                 </div>
 
                 <div className="footerContainer">
-                    <div className="contentContainer">
-                        Come to us, we have cookie and cookie policy 😂
-                    </div>
+                    <div className="contentContainer">Come to us, we have cookie and cookie policy 😂</div>
                 </div>
             </div>
         );

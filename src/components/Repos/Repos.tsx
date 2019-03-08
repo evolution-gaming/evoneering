@@ -19,7 +19,7 @@ export class Repos extends React.PureComponent<{}, ReposState> {
     state = { repos: [] };
 
     componentDidMount() {
-        fetch(API_URL).then(async (response) => {
+        fetch(API_URL).then(async response => {
             const data = await response.json();
 
             const repos = data.map((repo: Repo) => ({
@@ -28,26 +28,21 @@ export class Repos extends React.PureComponent<{}, ReposState> {
                 description: repo.description,
             }));
 
-            this.setState({ repos })
-        })
+            this.setState({ repos });
+        });
     }
 
     render() {
         return this.state.repos.map(({ name, full_name, description }, i) => {
             return (
-                <a href={`https://github.com/${full_name}`} target={"_blank"} className="RepoLink">
-                    <div key={i} className="Repo">
-
+                <a key={i} href={`https://github.com/${full_name}`} target={"_blank"} className="RepoLink">
+                    <div className="Repo">
                         <div className={"repoInfo"}>
-                            <div className={"repoName"}>
-                                {name}
-                            </div>
-                            <div className={"repoDescription"}>
-                                {description}
-                            </div>
+                            <div className={"repoName"}>{name}</div>
+                            <div className={"repoDescription"}>{description}</div>
                         </div>
 
-                        <img src={getStarBadgeImageSrc(full_name)}/>
+                        <img src={getStarBadgeImageSrc(full_name)} />
                     </div>
                 </a>
             );
