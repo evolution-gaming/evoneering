@@ -11,7 +11,7 @@ export class Tag extends React.PureComponent<TagProps> {
     public render() {
         const {
             label,
-            bgColor = `rgb(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)})`,
+            bgColor,
             textColor = "#fff",
         } = this.props;
 

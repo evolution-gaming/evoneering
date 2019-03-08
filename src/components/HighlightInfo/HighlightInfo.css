@@ -1,0 +1,32 @@
+.highlightContainer {
+    background: #000;
+    height: 320px;
+    display: flex;
+    justify-content: center;
+}
+
+.highlightContainer .contentContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+
+.highlightItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.highlightNumber {
+    font-size: 145px;
+    color: #fff;
+    font-weight: 900;
+}
+
+.highlightTitle {
+    font-size: 14px;
+    color: #B3B3B3;
+}
