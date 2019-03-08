@@ -177,3 +177,6 @@
     color: #FAFAFA;
     font-weight: 200;
 }
+.navigationContainer a:hover {
+    color: #87c5c7;
+}
