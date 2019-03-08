@@ -66,7 +66,11 @@
     padding-bottom: 80px;
 }
 
-.ossContainer .slogan, journalContainer .slogan {
+.cardContainer {
+    padding-bottom: 80px;
+}
+
+.ossContainer .slogan, .journalContainer .slogan {
     color: #000000;
     margin-top: 100px;
     margin-bottom: 65px;
