@@ -1,0 +1,48 @@
+.videoContainer {
+    background: #000000;
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+}
+
+.videoContainer .popup {
+    position: fixed;
+    width: 61vw;
+    padding-top: calc(61vw * (9 / 16));
+    height: 0;
+    left: 50vw;
+    top: 50vh;
+    transform: translate(-50%, -50%);
+    border: rgba(0, 0, 0, 0.5) 10000px solid; 
+    background: black padding-box;
+}
+.videoContainer .popup iframe {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.videoContainer .slogan {
+    margin-top: 100px;
+    margin-bottom: 65px;
+}
+
+.videoItem {
+    display: inline-block;
+    height: 0;
+    padding-top: calc(49% * (9 / 16));
+    width: 49%;
+    background: #fff;
+    margin-bottom: 2%;
+    cursor: pointer;
+    position: relative;
+}
+.videoItem iframe {
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.videoItem:nth-of-type(even) {
+    margin-right: 2%;
+}
