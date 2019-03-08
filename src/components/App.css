@@ -181,6 +181,11 @@
     color: #FAFAFA;
     font-weight: 200;
 }
+
+.navigationContainer {
+    display: inline-block !important;
+}
+
 .navigationContainer a:hover {
     color: #87c5c7;
 }
