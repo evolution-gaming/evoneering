@@ -1,8 +1,11 @@
 import React from "react";
 import "./App.css";
 import { TopBar } from "./TopBar/TopBar";
-import { Tag } from "./Tag/Tag";
 import { Button, ButtonTheme } from "./Button/Button";
+import { TagContainer } from "./Tag/TagContainer";
+import { Repos } from "./Repos/Repos";
+import { HighlightInfo } from "./HighlightInfo/HighlightInfo";
+import { JournalContainer } from "./Journal/JournalContainer";
 
 class App extends React.PureComponent {
     render() {
@@ -21,39 +24,7 @@ class App extends React.PureComponent {
                         </div>
 
                         <div className="tags">
-                            <Tag label={"Scala"}/>
-                            <Tag label={"JS"}/>
-                            <Tag label={"TypeScript"}/>
-                            <Tag label={"Scala"}/>
-                            <Tag label={"JS"}/>
-                            <Tag label={"TypeScript"}/>
-                            <Tag label={"Scala"}/>
-                            <Tag label={"JS"}/>
-                            <Tag label={"TypeScript"}/>
-                            <Tag label={"Scala"}/>
-                            <Tag label={"JS"}/>
-                            <Tag label={"TypeScript"}/>
-                            <Tag label={"Scala"}/>
-                            <Tag label={"JS"}/>
-                            <Tag label={"TypeScript"}/>
-                            <Tag label={"Scala"}/>
-                            <Tag label={"JS"}/>
-                            <Tag label={"TypeScript"}/>
-                            <Tag label={"Scala"}/>
-                            <Tag label={"JS"}/>
-                            <Tag label={"TypeScript"}/>
-                            <Tag label={"Scala"}/>
-                            <Tag label={"JS"}/>
-                            <Tag label={"TypeScript"}/>
-                            <Tag label={"Scala"}/>
-                            <Tag label={"JS"}/>
-                            <Tag label={"TypeScript"}/>
-                            <Tag label={"Scala"}/>
-                            <Tag label={"JS"}/>
-                            <Tag label={"TypeScript"}/>
-                            <Tag label={"Scala"}/>
-                            <Tag label={"JS"}/>
-                            <Tag label={"TypeScript"}/>
+                            <TagContainer />
                         </div>
                     </div>
                 </div>
@@ -63,10 +34,7 @@ class App extends React.PureComponent {
                             Open source projects we author or contribute to
                         </div>
 
-                        <div className="ossItem">oss</div>
-                        <div className="ossItem">oss</div>
-                        <div className="ossItem">oss</div>
-                        <div className="ossItem">oss</div>
+                        <Repos />
 
                         <div className="buttonContainer">
                             <Button
@@ -90,56 +58,25 @@ class App extends React.PureComponent {
                     </div>
                 </div>
 
-                <div className="ossContainer">
+                <div className="journalContainer">
                     <div className="contentContainer">
                         <div className="slogan">
                             Journal
                         </div>
 
-                        <div className="ossItem">oss</div>
-                        <div className="ossItem">oss</div>
+                        <JournalContainer />
 
-                        <div className="buttonContainer">
-                            <Button
-                                onClick={() => window.open('https://github.com/evolution-gaming', '_blank')}
-                                label={"All articles at or Medium"}
-                                theme={ButtonTheme.Dark}
-                            />
-                        </div>
+                        {/*<div className="buttonContainer">*/}
+                            {/*<Button*/}
+                                {/*onClick={() => window.open('https://github.com/evolution-gaming', '_blank')}*/}
+                                {/*label={"All articles at or Medium"}*/}
+                                {/*theme={ButtonTheme.Dark}*/}
+                            {/*/>*/}
+                        {/*</div>*/}
                     </div>
                 </div>
 
-                <div className="highlightContainer">
-                    <div className="contentContainer">
-
-                        <div className="highlightItem">
-                            <div className="highlightNumber">
-                                200
-                            </div>
-                            <div className="highlightTitle">
-                                Developers
-                            </div>
-                        </div>
-
-                        <div className="highlightItem">
-                            <div className="highlightNumber">
-                                6
-                            </div>
-                            <div className="highlightTitle">
-                                Offices
-                            </div>
-                        </div>
-
-                        <div className="highlightItem">
-                            <div className="highlightNumber">
-                                3
-                            </div>
-                            <div className="highlightTitle">
-                                Departments
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <HighlightInfo />
 
                 <div className="mapContainer">
                     <div className="contentContainer">
