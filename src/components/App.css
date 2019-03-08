@@ -56,6 +56,10 @@
     height: 14px;
 }
 
+.socialContainer path:hover {
+    fill: #87c5c7;
+}
+
 .ossContainer {
     background: #FAFAFA;
     min-height: 500px;
