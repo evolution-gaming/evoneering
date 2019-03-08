@@ -1,5 +1,6 @@
 .Tag {
-    padding: 15px 20px;
-    border-radius: 5px;
+    padding: calc(10 / 16 * 1rem) calc(18 / 16 * 1rem);
+    border-radius: calc(5 / 16 * 1rem);
     display: inline-block;
+    font-size: calc(14 / 16 * 1rem);
 }

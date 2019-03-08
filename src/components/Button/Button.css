@@ -1,7 +1,7 @@
 .Button {
-    padding: 25px;
-    font-size: 12px;
-    border-radius: 5px;
+    padding: calc(25 / 16 * 1rem);
+    font-size: calc(12 / 16 * 1rem);
+    border-radius: calc(5 / 16 * 1rem);
     display: inline-block;
     cursor: pointer;
 }

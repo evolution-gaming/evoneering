@@ -1,6 +1,6 @@
 .cardContainer {
     background: #000000;
-    min-height: 500px;
+    min-height: calc(500 / 16 * 1rem);
     display: flex;
     justify-content: center;
 }
@@ -12,7 +12,7 @@
     left: 50vw;
     top: 50vh;
     transform: translate(-50%, -50%);
-    border: rgba(0, 0, 0, 0.5) 10000px solid; 
+    border: rgba(0, 0, 0, 0.5) calc(10000 / 16 * 1rem) solid; 
     background: black padding-box;
 }
 .cardContainer .popup iframe {
@@ -21,29 +21,30 @@
     top: 0;
 }
 .cardContainer .slogan {
-    margin-top: 100px;
-    margin-bottom: 65px;
+    margin-top: calc(100 / 16 * 1rem);
+    margin-bottom: calc(65 / 16 * 1rem);
 }
 
 .Cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
 }
 .Card {
     width: 49%;
+    min-width: 240px;
     background: #fff;
     margin-bottom: 2%;
-    border-radius: 4px;
+    border-radius: calc(4 / 16 * 1rem);
 }
 .Card .text {
-    padding: 20px 30px;
+    padding: calc(20 / 16 * 1rem) calc(30 / 16 * 1rem);
 }
 .Card .title {
     font-weight: bold;
 }
 .Card .subtitle {
-    margin: 15px 0;
+    margin: calc(15 / 16 * 1rem) 0;
     font-weight: 100;
 }
 .Card img {

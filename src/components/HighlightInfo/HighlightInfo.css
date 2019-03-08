@@ -1,6 +1,6 @@
 .highlightContainer {
     background: #000;
-    height: 320px;
+    height: calc(320 / 16 * 1em);
     display: flex;
     justify-content: center;
 }
@@ -21,12 +21,12 @@
 }
 
 .highlightNumber {
-    font-size: 145px;
+    font-size: calc(145 / 16 * 1em);
     color: #fff;
     font-weight: 900;
 }
 
 .highlightTitle {
-    font-size: 14px;
+    font-size: calc(14 / 16 * 1em);
     color: #B3B3B3;
 }
