@@ -17,6 +17,10 @@ class App extends React.PureComponent {
                     </div>
                 </div>
                 <div className="mainInfoContainer">
+                    <video muted loop className={"Video"} autoPlay={true}>
+                        <source src={require("./evo.mp4")} type="video/mp4" />
+                    </video>
+                    <div className={"VideoOverlay"} />
                     <div className="contentContainer">
                         <div className="slogan">
                             We are the leading provider of B2B gaming solutions which believe in sharing our
@@ -24,7 +28,7 @@ class App extends React.PureComponent {
                         </div>
 
                         <div className="tags">
-                            <TagContainer />
+                            <TagContainer/>
                         </div>
                     </div>
                 </div>
@@ -34,7 +38,7 @@ class App extends React.PureComponent {
                             Open source projects we author or contribute to
                         </div>
 
-                        <Repos />
+                        <Repos/>
 
                         <div className="buttonContainer">
                             <Button
@@ -64,19 +68,19 @@ class App extends React.PureComponent {
                             Journal
                         </div>
 
-                        <JournalContainer />
+                        <JournalContainer/>
 
                         {/*<div className="buttonContainer">*/}
-                            {/*<Button*/}
-                                {/*onClick={() => window.open('https://github.com/evolution-gaming', '_blank')}*/}
-                                {/*label={"All articles at or Medium"}*/}
-                                {/*theme={ButtonTheme.Dark}*/}
-                            {/*/>*/}
+                        {/*<Button*/}
+                        {/*onClick={() => window.open('https://github.com/evolution-gaming', '_blank')}*/}
+                        {/*label={"All articles at or Medium"}*/}
+                        {/*theme={ButtonTheme.Dark}*/}
+                        {/*/>*/}
                         {/*</div>*/}
                     </div>
                 </div>
 
-                <HighlightInfo />
+                <HighlightInfo/>
 
                 <div className="mapContainer">
                     <div className="contentContainer">

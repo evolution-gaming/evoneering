@@ -15,11 +15,17 @@
     justify-content: center;
 }
 
+.topBarContainer .contentContainer, .mainInfoContainer .contentContainer {
+    z-index: 2;
+}
+
 .mainInfoContainer {
+    position: relative;
     background: black;
     padding-top: 184px;
     display: flex;
     justify-content: center;
+    overflow: hidden;
 }
 
 .slogan {
@@ -133,4 +139,26 @@
     align-items: center;
     color: #FAFAFA;
     font-weight: 200;
+}
+
+.Video {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+.VideoOverlay {
+    display: block;
+    content: " ";
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    min-height: 100%;
 }
