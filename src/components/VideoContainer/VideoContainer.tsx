@@ -13,10 +13,34 @@ interface PopupProps {
     children: any;
 }
 
-const Popup = ({onClose, children}: PopupProps) =>
-    <div onClick={onClose} className="popup">
-        {children}
-    </div>
+class Popup extends React.PureComponent<PopupProps> {
+    lockPos: {
+        x: number;
+        y: number;
+    } = {x: 0, y: 0};
+
+    onScroll = () => {
+        window.scrollTo(this.lockPos.x, this.lockPos.y);
+    }
+    componentDidMount() {
+        this.lockPos.x = window.scrollX;
+        this.lockPos.y = window.scrollY;
+        window.addEventListener("scroll", this.onScroll);
+    }
+    componentWillUnmount() {
+        window.removeEventListener("scroll", this.onScroll);
+    }
+
+    render() {
+        const {onClose, children} = this.props;
+
+        return (
+            <div onClick={onClose} className="popup">
+                {children}
+            </div>
+        );
+    }
+}
 
 interface VideoProps {
     src: string;
@@ -51,6 +75,7 @@ export class VideoContainer extends React.PureComponent<{}, VideoContainerState>
 
                     {videos.map(video =>
                         <div 
+                            key={video}
                             className="videoItem"
                             onClick={() => this.setState({activeVideo: video})}
                         >
@@ -60,10 +85,12 @@ export class VideoContainer extends React.PureComponent<{}, VideoContainerState>
                 </div>
 
                 {activeVideo &&
-                    <Popup onClose={() => this.setState({activeVideo: undefined})}>
+                    <Popup 
+                        onClose={() => this.setState({activeVideo: undefined})}
+                    >
                         <YoutubeVideo src={activeVideo}/>
                     </Popup>}
             </div>
-        )
+        );
     }
 }

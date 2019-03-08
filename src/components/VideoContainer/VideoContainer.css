@@ -14,6 +14,7 @@
     top: 50vh;
     transform: translate(-50%, -50%);
     border: rgba(0, 0, 0, 0.5) 10000px solid; 
+    background: black padding-box;
 }
 .videoContainer .popup iframe {
     position: absolute;
