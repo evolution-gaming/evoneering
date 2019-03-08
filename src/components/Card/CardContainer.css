@@ -1,11 +1,10 @@
-.videoContainer {
+.cardContainer {
     background: #000000;
     min-height: 500px;
     display: flex;
     justify-content: center;
 }
-
-.videoContainer .popup {
+.cardContainer .popup {
     position: fixed;
     width: 61vw;
     padding-top: calc(61vw * (9 / 16));
@@ -16,33 +15,38 @@
     border: rgba(0, 0, 0, 0.5) 10000px solid; 
     background: black padding-box;
 }
-.videoContainer .popup iframe {
+.cardContainer .popup iframe {
     position: absolute;
     left: 0;
     top: 0;
 }
-
-.videoContainer .slogan {
+.cardContainer .slogan {
     margin-top: 100px;
     margin-bottom: 65px;
 }
 
-.videoItem {
-    display: inline-block;
-    height: 0;
-    padding-top: calc(49% * (9 / 16));
+.Cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.Card {
     width: 49%;
     background: #fff;
     margin-bottom: 2%;
+    border-radius: 4px;
+}
+.Card .text {
+    padding: 20px 30px;
+}
+.Card .title {
+    font-weight: bold;
+}
+.Card .subtitle {
+    margin: 15px 0;
+    font-weight: 100;
+}
+.Card img {
+    width: 100%;
     cursor: pointer;
-    position: relative;
-}
-.videoItem iframe {
-    pointer-events: none;
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-.videoItem:nth-of-type(even) {
-    margin-right: 2%;
 }

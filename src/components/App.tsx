@@ -6,7 +6,7 @@ import { TagContainer } from "./Tag/TagContainer";
 import { Repos } from "./Repos/Repos";
 import { HighlightInfo } from "./HighlightInfo/HighlightInfo";
 import { JournalContainer } from "./Journal/JournalContainer";
-import { VideoContainer } from "./VideoContainer/VideoContainer";
+import { CardContainer } from "./Card/CardContainer";
 
 class App extends React.PureComponent {
     render() {
@@ -51,7 +51,7 @@ class App extends React.PureComponent {
                     </div>
                 </div>
 
-                <VideoContainer />
+                <CardContainer />
 
                 <div className="journalContainer">
                     <div className="contentContainer">

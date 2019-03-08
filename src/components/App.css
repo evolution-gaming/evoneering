@@ -35,12 +35,11 @@
     color: #fff;
 }
 
-.tags {
+.mainInfoContainer .tags {
     margin-top: 60px;
     margin-bottom: 60px;
 }
-
-.tags div {
+.mainInfoContainer .tags div {
     margin: 6px;
 }
 
