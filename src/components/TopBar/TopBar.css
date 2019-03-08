@@ -29,6 +29,7 @@
 .navigationContainer {
     width: 60%;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .navigationContainer a {

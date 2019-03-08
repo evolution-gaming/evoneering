@@ -8,11 +8,17 @@
 .videoContainer .popup {
     position: fixed;
     width: 61vw;
-    height: 61vh;
+    padding-top: calc(61vw * (9 / 16));
+    height: 0;
     left: 50vw;
     top: 50vh;
     transform: translate(-50%, -50%);
     border: rgba(0, 0, 0, 0.5) 10000px solid; 
+}
+.videoContainer .popup iframe {
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 
 .videoContainer .slogan {
@@ -22,14 +28,19 @@
 
 .videoItem {
     display: inline-block;
-    height: 450px;
+    height: 0;
+    padding-top: calc(49% * (9 / 16));
     width: 49%;
     background: #fff;
     margin-bottom: 2%;
     cursor: pointer;
+    position: relative;
 }
 .videoItem iframe {
     pointer-events: none;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 .videoItem:nth-of-type(even) {
     margin-right: 2%;
