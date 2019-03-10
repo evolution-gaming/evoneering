@@ -1,6 +1,6 @@
 .TopBar {
-    margin-top: 44px;
-    font-size: 24px;
+    margin-top: calc(44 / 16 * 1rem);
+    font-size: calc(24 / 16 * 1rem);
     display: flex;
     align-items: center;
     font-weight: 300;
@@ -16,8 +16,8 @@
 }
 
 .logoContainer {
-    height: 80px;
-    width: 200px;
+    height: calc(80 / 16 * 1rem);
+    width: calc(200 / 16 * 1rem);
 }
 
 .logoContainer svg {
@@ -28,19 +28,20 @@
 .navigationContainer {
     width: 60%;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .navigationContainer a {
     display: inline-block;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: calc(10 / 16 * 1rem);
+    margin-right: calc(10 / 16 * 1rem);
     color: #fff;
     text-decoration: none;
-    font-size: 12px;
+    font-size: calc(12 / 16 * 1rem);
 }
 
 .buttonContainer {
-    margin-top: 60px;
+    margin-top: calc(60 / 16 * 1rem);
     display: flex;
     justify-content: center;
 }

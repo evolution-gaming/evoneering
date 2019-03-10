@@ -3,20 +3,20 @@
     flex-direction: column;
     justify-content: space-around;
     border: 1px #E1E5F4 solid;
-    height: 100px;
-    margin-bottom: 12px;
+    height: calc(100 / 16 * 1rem);
+    margin-bottom: calc(12 / 16 * 1rem);
     align-items: center;
-    padding: 20px;
+    padding: calc(20 / 16 * 1rem);
     box-sizing: border-box;
 }
 
 .articleTitle {
     color: #000000;
     font-weight: bold;
-    font-size: 14px;
+    font-size: calc(14 / 16 * 1rem);
 }
 
 .articleDescription {
-    font-size: 12px;
+    font-size: calc(12 / 16 * 1rem);
     color: #979797;
 }
