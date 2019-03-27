@@ -7,7 +7,7 @@ import { ApolloProvider } from "react-apollo";
 import "./index.css";
 
 const client = new ApolloClient({
-    uri: process.env.API_URL || "http://localhost:1337/graphql"
+    uri: process.env.REACT_APP_API_URL || "http://localhost:1337/graphql"
 });
 
 const AppContainer = () => (
