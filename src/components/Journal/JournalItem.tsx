@@ -3,23 +3,26 @@ import "./JournalItem.css";
 
 export interface JournalItemProps {
     title: string;
-    paragraph: string;
-    URL: string;
+    description: string;
+    url: string;
+    author: string;
 }
 
 export class JournalItem extends React.PureComponent<JournalItemProps> {
     public render() {
         const {
             title,
-            paragraph,
-            URL
+            description,
+            url,
+            author,
         } = this.props;
 
         return (
-            <a href={URL} target={"_blank"}>
+            <a href={url} target={"_blank"}>
                 <div className={"JournalItem"}>
                     <div className={"articleTitle"}>{title}</div>
-                    <div className={"articleDescription"}>{paragraph}</div>
+                    <div className={"articleDescription"}>{description}</div>
+                    <div className={"articleAuthor"}>{author}</div>
                 </div>
             </a>
         )

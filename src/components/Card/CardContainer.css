@@ -12,7 +12,7 @@
     left: 50vw;
     top: 50vh;
     transform: translate(-50%, -50%);
-    border: rgba(0, 0, 0, 0.5) calc(10000 / 16 * 1rem) solid; 
+    border: rgba(0, 0, 0, 0.5) calc(10000 / 16 * 1rem) solid;
     background: black padding-box;
 }
 .cardContainer .popup iframe {
@@ -28,7 +28,7 @@
 .Cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
 }
 .Card {
     width: 49%;
@@ -36,7 +36,9 @@
     background: #fff;
     margin-bottom: 2%;
     border-radius: calc(4 / 16 * 1rem);
+    cursor: pointer;
 }
+
 .Card .text {
     padding: calc(20 / 16 * 1rem) calc(30 / 16 * 1rem);
 }
@@ -50,4 +52,16 @@
 .Card img {
     width: 100%;
     cursor: pointer;
+}
+
+.tags {
+    display: flex;
+}
+
+.tags > div {
+    margin-left: 5px;
+}
+
+.tags > div:first-child {
+    margin-left: 0;
 }

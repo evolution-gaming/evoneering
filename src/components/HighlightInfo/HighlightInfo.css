@@ -3,6 +3,9 @@
     height: calc(320 / 16 * 1em);
     display: flex;
     justify-content: center;
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
 }
 
 .highlightContainer .contentContainer {
@@ -18,15 +21,23 @@
     justify-content: center;
     align-items: center;
     height: 100%;
+    padding-right: 1rem;
+}
+
+.highlightItem:last-child {
+    padding-right: 0;
 }
 
 .highlightNumber {
-    font-size: calc(145 / 16 * 1em);
+    font-size: calc(125 / 16 * 1rem);
     color: #fff;
     font-weight: 900;
+    text-align: center;
 }
 
 .highlightTitle {
-    font-size: calc(14 / 16 * 1em);
+    font-size: calc(14 / 16 * 1rem);
     color: #B3B3B3;
+    min-width: 5rem;
+    text-align: center;
 }

@@ -5,11 +5,11 @@ import { JournalItem, JournalItemProps } from "./JournalItem";
 
 const GET_POSTS = gql`
   {
-    posts {
-      id,
+    journals {
       title,
-      paragraph,
-      URL
+      description,
+      author,
+      url,
     }
   }
 `;
@@ -19,9 +19,9 @@ export class JournalContainer extends React.PureComponent {
         return (
             <Query query={GET_POSTS}>
                 {({ loading, data }) => {
-                    if (loading) return null;
+                    if (loading || !data) return null;
 
-                    const items = data.posts.map((props: JournalItemProps, i: number) => <JournalItem key={i} {...props}/>);
+                    const items = data.journals.map((props: JournalItemProps, i: number) => <JournalItem key={i} {...props}/>);
                     return [...items]
                 }}
             </Query>

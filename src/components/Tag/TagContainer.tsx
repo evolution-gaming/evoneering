@@ -6,21 +6,26 @@ import { Tag } from "./Tag";
 const GET_TAGS = gql`
   {
     tags {
-      name,
+      title,
       color,
     }
   }
 `;
+
+interface TagProps {
+    title: string;
+    color: string;
+}
 
 export class TagContainer extends React.PureComponent {
     public render() {
         return (
             <Query query={GET_TAGS}>
                 {({ loading, data }) => {
-                    if (loading) return null;
+                    if (loading || !data) return null;
 
                     const tags = data.tags.map((
-                        { name, color }: { name: string; color: string }, i: number) => <Tag key={i} label={name} bgColor={color}/>
+                        { title, color }: TagProps, i: number) => <Tag key={i} label={title} bgColor={color}/>
                     );
 
                     return [...tags]

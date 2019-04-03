@@ -4,68 +4,67 @@ import { Popup } from "./Popup";
 import Query, { QueryResult } from "react-apollo/Query";
 import gql from "graphql-tag";
 import { Tag } from "../Tag/Tag";
-
-const BACKEND_URL = 'http://localhost:1337/'
+import { STATIC_SERVER } from "./../../index";
 
 interface Card {
-    URL: string;
+    url: string;
     title: string;
-    subtitle: string;
-    thumbnail: {
+    description: string;
+    image: {
         url: string;
     };
     tags: {
-        name: string;
+        title: string;
         color: string;
-    };
+    }[];
 }
 
 type CardQueryResult = QueryResult<{
-    cards: Card[];
+    talks: Card[];
 }>
 
 const GET_CARDS = gql`{
-    cards {
-        thumbnail {
-            url
-        }
-        title
-        subtitle
-        URL
-        tags {
-            name
-            color
-        }
+    talks {
+      title,
+      description,
+      image {
+        url
+      },
+      url,
+      tags {
+      	title,
+        color
+      },
     }
-}`;
+  }`;
 
 interface CardsProps {
     onOpen: (URL: string) => void;
 }
 
-const Cards = ({onOpen}: CardsProps) =>
+const Cards = ({ onOpen }: CardsProps) =>
     <div className="Cards">
         <Query query={GET_CARDS}>
-            {({loading, data}: CardQueryResult) =>
-                !loading && data!.cards.map(({thumbnail, URL, title, subtitle, tags}) =>
-                    <div 
-                        key={URL}
+            {({ loading, data }: CardQueryResult) => {
+                if (loading || !data) return null;
+
+                return data.talks.map(({ title, description, image, url, tags }) =>
+                    <div
+                        key={url}
                         className="Card"
+                        onClick={() => onOpen(url)}
                     >
-                        <img
-                            src={BACKEND_URL + thumbnail.url}
-                            onClick={() => onOpen(URL)}
-                        />
+                        <img src={STATIC_SERVER + image.url}/>
                         <div className="text">
                             <div className="title">{title}</div>
-                            <div className="subtitle">{subtitle}</div>
+                            <div className="subtitle">{description}</div>
                             <div className="tags">
-                                <Tag bgColor={tags.color} label={tags.name}></Tag>
+                                {tags.map((tag, i) => <Tag key={i} bgColor={tag.color} label={tag.title}/>)}
                             </div>
                         </div>
                     </div>
                 )
-            }
+            }}
         </Query>
     </div>;
 
@@ -73,9 +72,9 @@ interface VideoProps {
     src: string;
 }
 
-const YoutubeVideo = ({src}: VideoProps) => {
+const YoutubeVideo = ({ src }: VideoProps) => {
     if (src.includes("youtube.com/watch")) {
-        src = src.replace("youtube.com/watch?v=", "youtube.com/embed/")
+        src = src.replace("youtube.com/watch?v=", "youtube.com/embed/");
     }
 
     return (
@@ -84,18 +83,17 @@ const YoutubeVideo = ({src}: VideoProps) => {
             height="100%"
             src={src}
             frameBorder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
-        ></iframe>
+        />
     )
-}
+};
 
 interface CardsState {
     activeVideo?: string,
 }
 
 export class CardContainer extends React.Component<{}, CardsState> {
-    state: CardsState = {}
+    state: CardsState = {};
 
     public render() {
         const { activeVideo } = this.state;
@@ -107,14 +105,14 @@ export class CardContainer extends React.Component<{}, CardsState> {
                         Our conference talks
                     </div>
 
-                    <Cards onOpen={URL => this.setState({activeVideo: URL})}/>
-                    
+                    <Cards onOpen={URL => this.setState({ activeVideo: URL })}/>
+
                     {activeVideo &&
-                        <Popup 
-                            onClose={() => this.setState({activeVideo: undefined})}
-                        >
-                            <YoutubeVideo src={activeVideo}/>
-                        </Popup>}
+                    <Popup
+                        onClose={() => this.setState({ activeVideo: undefined })}
+                    >
+                        <YoutubeVideo src={activeVideo}/>
+                    </Popup>}
                 </div>
             </div>
         );

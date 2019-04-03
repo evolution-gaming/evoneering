@@ -16,12 +16,24 @@ export class TopBar extends React.PureComponent<TopBarProps> {
                 </div>
 
                 <div className={"navigationContainer"}>
-                    <a href="#tech">Technologies</a>
-                    <a href="#tech">Open-source</a>
-                    <a href="#tech">Journal</a>
-                    <a href="#tech">Talks</a>
-                    <a href="#tech">Jobs</a>
-                    <a href="#tech">Company</a>
+                    <div>
+                        <a href="#technologies">Technologies</a>
+                    </div>
+                    <div>
+                        <a href="#opensource">Open-source</a>
+                    </div>
+                    <div>
+                        <a href="#talks">Talks</a>
+                    </div>
+                    <div>
+                        <a href="#journal">Journal</a>
+                    </div>
+                    <div>
+                        <a href="https://www.evolutiongamingcareers.com/engineering-positions/" target="_blank">Jobs</a>
+                    </div>
+                    <div>
+                        <a href="https://www.evolutiongaming.com/" target="_blank">Company</a>
+                    </div>
                 </div>
                 <div className={"socialContainer"}>
                     <a href="https://www.facebook.com/evoneering" target="_blank">

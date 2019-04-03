@@ -25,3 +25,8 @@ allure-results
 __image_snapshots__/local
 allure-report
 __diff_output__
+.env
+deploy/hosts.ini
+deploy/build.zip
+deploy/build.retry
+.env
