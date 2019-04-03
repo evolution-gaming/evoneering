@@ -55,6 +55,7 @@
 .mainInfoContainer .tags {
     margin-top: calc(60 / 16 * 1rem);
     margin-bottom: calc(60 / 16 * 1rem);
+    flex-wrap: wrap;
 }
 .mainInfoContainer .tags div {
     margin: calc(6 / 16 * 1rem);

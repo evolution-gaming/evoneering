@@ -3,12 +3,12 @@ import ReactDOM from "react-dom";
 import ApolloClient from "apollo-boost";
 import App from "./components/App";
 import { ApolloProvider } from "react-apollo";
+import { API_URL } from "./config";
 
 import "./index.css";
 
-export const STATIC_SERVER = process.env.REACT_APP_STATIC_URL || "http://localhost:1337/";
 const client = new ApolloClient({
-    uri: process.env.REACT_APP_API_URL || "http://localhost:1337/graphql"
+    uri: API_URL,
 });
 
 const AppContainer = () => (

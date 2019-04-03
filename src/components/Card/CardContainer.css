@@ -54,14 +54,14 @@
     cursor: pointer;
 }
 
-.tags {
+.Cards .tags {
     display: flex;
 }
 
-.tags > div {
+.Cards .tags > div {
     margin-left: 5px;
 }
 
-.tags > div:first-child {
+.Cards .tags > div:first-child {
     margin-left: 0;
 }
