@@ -1,0 +1,56 @@
+---
+- hosts: "{{ target }}"
+  gather_facts: False
+  become_method: sudo
+
+  vars:
+    archive_path: "/opt/deploy"
+    script_path: "/opt/scripts/deploy.sh"
+    archive_name: "build.zip"
+
+  tasks:
+
+    - name: Check if archive exists at current directory
+      local_action:
+        module: stat
+        path: "{{ archive_name }}"
+      register: build_archive
+      tags:
+        - check
+        - archive
+
+    - name: Fail if no archive found in currect directory
+      fail:
+        msg: "Please build deployment archive and place it in currect directory with name :: {{ archive_name }}"
+      when: "build_archive.stat.exists == false"
+      tags:
+        - check
+        - archive
+
+    - name: Copy archive to remote server
+      copy:
+        src: build.zip
+        dest: "{{ archive_path }}"
+      tags:
+        - deploy
+        - copy
+
+    - name: Execute deployment script
+      raw: "{{ script_path }} {{ archive_path }}/{{ archive_name }}"
+      register: std_out
+      ignore_errors: yes
+      become: yes        
+      tags:
+        - deploy
+        - execute
+
+    - name: Display final status for deployment script
+      debug:
+        msg: "{{ std_out.stdout.split('\r\n') }}"
+      tags:
+        - deploy
+        - status
+
+
+    
+        

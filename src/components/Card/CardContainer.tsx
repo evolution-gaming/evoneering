@@ -4,7 +4,7 @@ import { Popup } from "./Popup";
 import Query, { QueryResult } from "react-apollo/Query";
 import gql from "graphql-tag";
 import { Tag } from "../Tag/Tag";
-import { STATIC_SERVER } from "./../../index";
+import { STATIC_SERVER } from "./../../config";
 
 interface Card {
     url: string;

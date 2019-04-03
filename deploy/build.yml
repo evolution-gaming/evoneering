@@ -1,0 +1,92 @@
+---
+- hosts: "{{ target }}"
+  gather_facts: False
+  become_method: sudo
+
+  vars:
+    repo: https://github.com/evolution-gaming/evoneering.git
+    build_path: "/var/tmp_build"
+    static_build_dir: "build"
+
+    delegate_host: "{{ ansible_play_hosts if build is defined and build == 'remote' else ['localhost'] }}"
+    conn: "{{ 'ssh' if build is defined and build == 'remote' else 'local' }}"
+
+  tasks:
+
+    - name: Check if environment URL is defined and is correct
+      assert:
+        that:
+          - "lookup('env','REACT_APP_API_URL') | length > 0"
+          - "lookup('env','REACT_APP_STATIC_URL') | length > 0"
+          - "lookup('env','REACT_APP_STATIC_URL') is search('https://.*com/graphql')"
+          - "lookup('env','REACT_APP_API_URL') is search('https://.*com/graphql')"
+        msg: "Aplication REACT_APP_API_URL and REACT_APP_STATIC_URL env variables are undefined or incorrect."
+      tags:
+        - check
+        - build
+
+    - name: Create build directory
+      file:
+        state: directory
+        path: "{{ build_path }}"
+        mode: 0777
+      become: yes
+      delegate_to: "{{ item }}"
+      connection: "{{ conn }}"
+      with_items: "{{ delegate_host }}"
+      tags:
+        - dir
+        - build
+
+    - name: Clone repository
+      git:
+        repo: "{{ repo }}"
+        dest: "{{ build_path }}/evoneering"
+        clone: yes
+        update: yes
+      delegate_to: "{{ item }}"
+      connection: "{{ conn }}"
+      with_items: "{{ delegate_host }}"
+      tags:
+        - clone
+        - build
+
+    - name: Update npm packages
+      npm:
+        path: "{{  build_path }}/evoneering"
+      delegate_to: "{{ item }}"
+      connection: "{{ conn }}"
+      with_items: "{{ delegate_host }}"
+      tags:
+        - npm
+        - build
+
+    - name: Build static files
+      shell: "REACT_APP_API_URL={{ lookup('env','REACT_APP_API_URL') }} REACT_APP_STATIC_URL={{ lookup('env','REACT_APP_STATIC_URL') }} npm run build"
+      args:
+        chdir: "{{ build_path }}/evoneering"
+      delegate_to: "{{ item }}"
+      connection: "{{ conn }}"
+      with_items: "{{ delegate_host }}"
+      tags:
+        - build
+        - npm
+
+    - name: Archive build directory
+      archive:
+        path: "{{ build_path }}/evoneering/{{ static_build_dir }}"
+        dest: "{{ static_build_dir }}.zip"
+        format: zip
+      delegate_to: "{{ item }}"
+      connection: "{{ conn }}"
+      with_items: "{{ delegate_host }}"
+      tags:
+        - build
+        - archive
+
+    - name: Print Useful information
+      debug:
+        msg: "Deployment archive has been built here :: {{ '/home/' + remote_user + '/' + static_build_dir + '.zip' if build is defined and build == 'remote' else './' + static_build_dir + '.zip' }} on {{ delegate_host }} machine"
+      tags:
+        - build
+        - msg
