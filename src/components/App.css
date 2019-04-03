@@ -6,10 +6,10 @@
         --min-viewport-width: 320px;
         --max-viewport-width: 1366px;
         font-size: calc(
-            var(--min-font-size) + 
-            (var(--max-font-size) - var(--min-font-size)) * 
+            var(--min-font-size) +
+            (var(--max-font-size) - var(--min-font-size)) *
             (
-                (100vw - var(--min-viewport-width)) / 
+                (100vw - var(--min-viewport-width)) /
                 (var(--max-viewport-width) - var(--min-viewport-width)))
         ); /* ^ I don't know why this didn't work */
         font-size: calc(12px + (16 - 12) * ((100vw - 300px) / (1366 - 300)));
@@ -91,51 +91,6 @@
     color: #000000;
     margin-top: calc(100 / 16 * 1rem);
     margin-bottom: calc(65 / 16 * 1rem);
-}
-
-/* THIS CODE IS DEAD
-.ossItem {
-    border: 1px #E1E5F4 solid;
-    height: calc(100 / 16 * 1rem);
-    margin-bottom: calc(12 / 16 * 1rem);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-*/
-
-.highlightContainer {
-    background: #000;
-    height: calc(320 / 16 * 1rem);
-    display: flex;
-    justify-content: center;
-}
-
-.highlightContainer .contentContainer {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 100%;
-    min-width: 600px;
-}
-
-.highlightItem {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-
-.highlightNumber {
-    font-size: calc(145 / 16 * 1rem);
-    color: #fff;
-    font-weight: 900;
-}
-
-.highlightTitle {
-    font-size: calc(14 / 16 * 1rem);
-    color: #B3B3B3;
 }
 
 .mapContainer {

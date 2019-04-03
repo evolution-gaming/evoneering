@@ -3,9 +3,7 @@
     flex-direction: column;
     justify-content: space-around;
     border: 1px #E1E5F4 solid;
-    height: calc(100 / 16 * 1rem);
     margin-bottom: calc(12 / 16 * 1rem);
-    align-items: center;
     padding: calc(20 / 16 * 1rem);
     box-sizing: border-box;
 }
@@ -13,10 +11,19 @@
 .articleTitle {
     color: #000000;
     font-weight: bold;
-    font-size: calc(14 / 16 * 1rem);
+    font-size: calc(1rem);
+    text-align: center;
 }
 
 .articleDescription {
-    font-size: calc(12 / 16 * 1rem);
+    font-size: calc(.8rem);
     color: #979797;
+    padding-top: .3rem;
+    padding-bottom: .3rem;
+}
+
+.articleAuthor {
+    color: #979797;
+    font-size: calc(.8rem);
+    text-align: left;
 }

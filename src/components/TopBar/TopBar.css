@@ -18,6 +18,7 @@
 .logoContainer {
     height: calc(80 / 16 * 1rem);
     width: calc(200 / 16 * 1rem);
+    margin-right: 1rem;
 }
 
 .logoContainer svg {
@@ -29,6 +30,10 @@
     width: 60%;
     display: flex;
     flex-wrap: wrap;
+}
+
+.navigationContainer div {
+    position: relative;
 }
 
 .navigationContainer a {
@@ -44,4 +49,23 @@
     margin-top: calc(60 / 16 * 1rem);
     display: flex;
     justify-content: center;
+}
+
+.navigationContainer a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    border-radius: 5px;
+    left: 0;
+    background-color: #fff;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.navigationContainer a:hover:before {
+    visibility: visible;
+    transform: scaleX(1);
 }

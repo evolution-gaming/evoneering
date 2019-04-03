@@ -15,9 +15,11 @@
     "enzyme-adapter-react-16": "^1.9.1",
     "graphql": "^14.1.1",
     "react": "^16.8.1",
+    "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-apollo": "^2.5.2",
     "react-dom": "^16.8.1",
     "react-scripts": "2.1.5",
+    "react-scrollable-anchor": "^0.6.1",
     "react-test-renderer": "^16.8.1",
     "typescript": "3.3.3"
   },
@@ -44,6 +46,7 @@
   },
   "devDependencies": {
     "@types/puppeteer": "^1.12.1",
+    "@types/react-scrollable-anchor": "^0.6.0",
     "jest-allure": "^0.1.1",
     "jest-allure-image-snapshot": "0.0.10",
     "puppeteer": "1.11.0"
