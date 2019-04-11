@@ -9,7 +9,7 @@ ___
 1. Fill in host information in `hosts.ini` file  
 2. Please make sure you have build frontend with passed in env variable 
 ```shell
-export REACT_APP_API_URL="https://example.com/graphql" REACT_APP_STATIC_URL="https://example.com/graphql"`
+export REACT_APP_API_URL="https://example.com/graphql" REACT_APP_STATIC_URL="https://example.com"`
 ```
 3. Prepare build.zip archive localy and place same directory as playbook `deploy.yml`  
 4. Make sure you pass username with `-u your_username` if it differs from your workstation and remote server  

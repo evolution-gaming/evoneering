@@ -18,7 +18,7 @@
         that:
           - "lookup('env','REACT_APP_API_URL') | length > 0"
           - "lookup('env','REACT_APP_STATIC_URL') | length > 0"
-          - "lookup('env','REACT_APP_STATIC_URL') is search('https://.*com/graphql')"
+          - "lookup('env','REACT_APP_STATIC_URL') is search('https://.*com')"
           - "lookup('env','REACT_APP_API_URL') is search('https://.*com/graphql')"
         msg: "Aplication REACT_APP_API_URL and REACT_APP_STATIC_URL env variables are undefined or incorrect."
       tags:
@@ -84,9 +84,19 @@
         - build
         - archive
 
+    - name: Gather user facts
+      setup:
+        filter: 'ansible_user_*'
+      delegate_to: "{{ item }}"
+      connection: "{{ conn }}"
+      with_items: "{{ delegate_host }}"
+      tags:
+        - build
+        - facts      
+
     - name: Print Useful information
       debug:
-        msg: "Deployment archive has been built here :: {{ '/home/' + remote_user + '/' + static_build_dir + '.zip' if build is defined and build == 'remote' else './' + static_build_dir + '.zip' }} on {{ delegate_host }} machine"
+        msg: "Deployment archive has been built here :: {{ '/home/' + ansible_user_id + '/' + static_build_dir + '.zip' if build is defined and build == 'remote' else './' + static_build_dir + '.zip' }} on {{ delegate_host }} machine"
       tags:
         - build
         - msg
