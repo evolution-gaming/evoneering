@@ -33,6 +33,11 @@ const hexes: Hex[] = [
         transform: "translate(978.3243426606336,120.27815114503974)",
     },
     {
+        town: "Minsk",
+        country: "Belarus",
+        transform: "translate(1107.3946405143329,102.29781508318658)",
+    },
+    {
         town: "Stockholm",
         country: "Sweden",
         transform: "translate(1037.8891563985787,48.39641116208053)",
@@ -84,9 +89,8 @@ export class Map extends React.PureComponent<MapProps, MapState> {
         return (
             <>
                 <div className="map">
-                    <img className="mapEvoLogo" src="/evoLogo.svg" />
                     <div className="mapBody">
-                        <img className="mapBackground" src="/map.svg" width="100%" />
+                        <img className="mapBackground" src={require("./map.svg")} width="100%" />
                         <div className="mapOverlay">
                             <svg version="1.1" viewBox="0 0 2560 1289">
                                 <g>

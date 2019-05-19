@@ -156,3 +156,39 @@
     right: 0;
     min-height: 100%;
 }
+
+.footerLogo {
+    position: relative;
+    height: 50px;
+}
+
+.footerLogo svg {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.cultureContainer {
+    display: flex;
+    justify-content: center;
+    background: #000;
+    padding-bottom: calc(65 / 16 * 1rem);
+}
+
+.cultureContainer .slogan {
+    margin-top: calc(100 / 16 * 1rem);
+    margin-bottom: calc(65 / 16 * 1rem);
+}
+
+.cultureVideoContainer {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+}
+
+.cultureVideoContainer iframe {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}

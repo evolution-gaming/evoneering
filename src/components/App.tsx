@@ -10,6 +10,7 @@ import { Map } from "./Map/Map";
 import { CardContainer } from "./Card/CardContainer";
 import { IntroContainer } from "./Intro/IntroContainer";
 import ScrollableAnchor from "react-scrollable-anchor";
+import { Logo } from "./Logo/Logo";
 
 class App extends React.PureComponent {
     render() {
@@ -38,7 +39,7 @@ class App extends React.PureComponent {
                 <ScrollableAnchor id={'opensource'}>
                     <div className="ossContainer">
                         <div className="contentContainer">
-                            <div className="slogan">Open source projects we author or contribute to
+                            <div className="slogan">Open Source Projects that we author or contribute to
                             </div>
 
                             <Repos/>
@@ -61,7 +62,7 @@ class App extends React.PureComponent {
                 <ScrollableAnchor id={'journal'}>
                     <div className="journalContainer">
                         <div className="contentContainer">
-                            <div className="slogan">Journal</div>
+                            <div className="slogan">Journals of our colleagues</div>
                             <JournalContainer/>
                         </div>
                     </div>
@@ -71,12 +72,32 @@ class App extends React.PureComponent {
 
                 <div className="mapContainer">
                     <div className="contentContainer">
+                        <div className="slogan">Our locations</div>
                         <Map/>
                     </div>
                 </div>
 
+                <div className="cultureContainer">
+                    <div className="contentContainer">
+                        <div className="slogan">Our Culture and Technology</div>
+                        <div className="cultureVideoContainer">
+                            <iframe
+                                width="100%"
+                                height="100%"
+                                src="https://www.youtube.com/embed/e8jp2iS_Wt8"
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                            />
+                        </div>
+                    </div>
+                </div>
                 <div className="footerContainer">
-                    <div className="contentContainer">Evolution Gaming Engineering</div>
+                    <div className="contentContainer">
+                        <div className="footerLogo">
+                            <Logo/>
+                        </div>
+                    </div>
                 </div>
             </div>
         );

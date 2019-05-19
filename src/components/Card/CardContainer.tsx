@@ -102,7 +102,7 @@ export class CardContainer extends React.Component<{}, CardsState> {
             <div className="cardContainer">
                 <div className="contentContainer">
                     <div className="slogan">
-                        Our conference talks
+                        Our Conference Talks
                     </div>
 
                     <Cards onOpen={URL => this.setState({ activeVideo: URL })}/>
