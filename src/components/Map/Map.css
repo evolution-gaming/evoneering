@@ -12,3 +12,39 @@
     top: 0;
     width: 100%;
 }
+.mapOverlay svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+}
+
+.mapOverlay path {
+    pointer-events: all;
+}
+
+.buttons {
+    display: flex;
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 40px;
+
+}
+
+.buttons .Button {
+    flex: 1 0 18%;
+    margin: calc(5 / 16 * 1rem);
+    text-align: center;
+}
+
+.buttons .Button {
+    flex: 1 0 18%;
+    margin: calc(5 / 16 * 1rem);
+    text-align: center;
+}
+
+.hex {
+    cursor: pointer;
+}

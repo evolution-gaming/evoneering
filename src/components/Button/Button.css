@@ -19,10 +19,9 @@
 .Button.dark {
     color: #FAFBFB;
     background: #A0ABB8;
+    border: 1px solid #A0ABB8;
 }
 
 .Button.dark:hover {
-    color: #A0ABB8;
-    border: 1px solid #A0ABB8;
-    background: transparent;
+    background: #88919c;
 }

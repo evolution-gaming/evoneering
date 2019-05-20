@@ -107,18 +107,6 @@
     margin-bottom: calc(60 / 16 * 1rem);
 }
 
-.buttons {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.buttons .Button {
-    flex: 1 0 18%;
-    margin: calc(5 / 16 * 1rem);
-    text-align: center;
-}
-
 .footerContainer {
     height: calc(80 / 16 * 1rem);
     background: #000;
