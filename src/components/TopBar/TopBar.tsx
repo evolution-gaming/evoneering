@@ -29,6 +29,12 @@ export class TopBar extends React.PureComponent<TopBarProps> {
                         <a href="#journal">Journal</a>
                     </div>
                     <div>
+                        <a href="#locations">Locations</a>
+                    </div>
+                    <div>
+                        <a href="#culture">Our Culture</a>
+                    </div>
+                    <div>
                         <a href="https://www.evolutiongamingcareers.com/engineering-positions/" target="_blank">Jobs</a>
                     </div>
                     <div>

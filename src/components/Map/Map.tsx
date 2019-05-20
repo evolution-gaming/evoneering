@@ -1,6 +1,6 @@
 import React from "react";
 import "./Map.css";
-import { Button, ButtonTheme } from "../Button/Button";
+import {Button, ButtonTheme} from "../Button/Button";
 
 export enum MapTheme {
     Light = "light",
@@ -90,32 +90,30 @@ export class Map extends React.PureComponent<MapProps, MapState> {
             <>
                 <div className="map">
                     <div className="mapBody">
-                        <img className="mapBackground" src={require("./map.svg")} width="100%" />
+                        <img className="mapBackground" src={require("./map.svg")} width="100%"/>
                         <div className="mapOverlay">
                             <svg version="1.1" viewBox="0 0 2560 1289">
-                                <g>
-                                    <g transform="translate(282.24976562496346,455.0926052515138) scale(1)">
-                                        <g fillOpacity="1" strokeWidth="0">
-                                            {hexes.map(({ transform, town }, index) => {
-                                                return (
-                                                    <g
-                                                        key={index}
-                                                        transform={transform}
-                                                        fill={town === this.state.town ? "#FF0000" : "#0000FF"}
-                                                    >
-                                                        <path d="M8.5,5.5 L0.5,9.5 L-7.5,5.5 L-7.5,-4.5 L0.5,-8.5 L8.5,-4.5 Z" />
-                                                    </g>
-                                                );
-                                            })}
-                                        </g>
+                                <g transform="translate(282.24976562496346,455.0926052515138) scale(1)">
+                                    <g fillOpacity="1" strokeWidth="0">
+                                        {hexes.map(({transform, town}, index) => {
+                                            return (
+                                                <g
+                                                    key={index}
+                                                    transform={transform}
+                                                    fill={town === this.state.town ? "#FF0000" : "#0000FF"}
+                                                    className={"hex"}
+                                                    onClick={() => this.highlight(town)}
+                                                >
+                                                    <path d="M8.5,5.5 L0.5,9.5 L-7.5,5.5 L-7.5,-4.5 L0.5,-8.5 L8.5,-4.5 Z"/>
+                                                </g>
+                                            );
+                                        })}
                                     </g>
                                 </g>
                             </svg>
                         </div>
                     </div>
                 </div>
-                <div className="slogan">Offices</div>
-
                 <div className="buttons">
                     {hexes.map(({ town, country }, index) => {
                         return (
@@ -123,7 +121,7 @@ export class Map extends React.PureComponent<MapProps, MapState> {
                                 key={index}
                                 onClick={() => this.highlight(town)}
                                 label={`${town} (${country})`}
-                                theme={ButtonTheme.Light}
+                                theme={town === this.state.town ? ButtonTheme.Dark :ButtonTheme.Light}
                             />
                         );
                     })}

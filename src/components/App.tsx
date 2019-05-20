@@ -70,28 +70,32 @@ class App extends React.PureComponent {
 
                 <HighlightInfo/>
 
-                <div className="mapContainer">
-                    <div className="contentContainer">
-                        <div className="slogan">Our locations</div>
-                        <Map/>
-                    </div>
-                </div>
-
-                <div className="cultureContainer">
-                    <div className="contentContainer">
-                        <div className="slogan">Our Culture and Technology</div>
-                        <div className="cultureVideoContainer">
-                            <iframe
-                                width="100%"
-                                height="100%"
-                                src="https://www.youtube.com/embed/e8jp2iS_Wt8"
-                                frameBorder="0"
-                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                allowFullScreen
-                            />
+                <ScrollableAnchor id={'locations'}>
+                    <div className="mapContainer">
+                        <div className="contentContainer">
+                            <div className="slogan">Our locations</div>
+                            <Map/>
                         </div>
                     </div>
-                </div>
+                </ScrollableAnchor>
+
+                <ScrollableAnchor id={'culture'}>
+                    <div className="cultureContainer">
+                        <div className="contentContainer">
+                            <div className="slogan">Our Culture and Technology</div>
+                            <div className="cultureVideoContainer">
+                                <iframe
+                                    width="100%"
+                                    height="100%"
+                                    src="https://www.youtube.com/embed/e8jp2iS_Wt8"
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </ScrollableAnchor>
                 <div className="footerContainer">
                     <div className="contentContainer">
                         <div className="footerLogo">
