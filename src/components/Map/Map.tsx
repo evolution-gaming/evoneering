@@ -70,7 +70,7 @@ const hexes: Hex[] = [
     {
         town: "Silema",
         country: "Malta",
-        transform: "translate(1027.9682881529968,281.9823629083579)",
+        transform: "translate(1057.9682881529968,251.9823629083579)",
     },
     {
         town: "Bucharest",

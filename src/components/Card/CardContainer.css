@@ -21,8 +21,8 @@
     top: 0;
 }
 .cardContainer .slogan {
-    margin-top: calc(100 / 16 * 1rem);
-    margin-bottom: calc(65 / 16 * 1rem);
+    margin-top: calc(50 / 16 * 1rem);
+    margin-bottom: calc(50 / 16 * 1rem);
 }
 
 .Cards {
@@ -56,12 +56,11 @@
 
 .Cards .tags {
     display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(6 / 16 * -1rem);
 }
 
 .Cards .tags > div {
-    margin-left: 5px;
-}
-
-.Cards .tags > div:first-child {
-    margin-left: 0;
+    margin-left: calc(6 / 16 * 1rem);
+    margin-bottom: calc(6 / 16 * 1rem);
 }

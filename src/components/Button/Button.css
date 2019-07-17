@@ -2,7 +2,9 @@
     padding: calc(25 / 16 * 1rem);
     font-size: calc(12 / 16 * 1rem);
     border-radius: calc(5 / 16 * 1rem);
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
 }
 

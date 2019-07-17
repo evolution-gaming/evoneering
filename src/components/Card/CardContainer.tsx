@@ -96,25 +96,19 @@ export class CardContainer extends React.Component<{}, CardsState> {
     state: CardsState = {};
 
     public render() {
-        const { activeVideo } = this.state;
+        const {activeVideo} = this.state;
 
         return (
-            <div className="cardContainer">
-                <div className="contentContainer">
-                    <div className="slogan">
-                        Our Conference Talks
-                    </div>
+            <>
+                <Cards onOpen={URL => this.setState({activeVideo: URL})}/>
 
-                    <Cards onOpen={URL => this.setState({ activeVideo: URL })}/>
-
-                    {activeVideo &&
-                    <Popup
-                        onClose={() => this.setState({ activeVideo: undefined })}
-                    >
-                        <YoutubeVideo src={activeVideo}/>
-                    </Popup>}
-                </div>
-            </div>
+                {activeVideo &&
+                <Popup
+                    onClose={() => this.setState({activeVideo: undefined})}
+                >
+                    <YoutubeVideo src={activeVideo}/>
+                </Popup>}
+            </>
         );
     }
 }

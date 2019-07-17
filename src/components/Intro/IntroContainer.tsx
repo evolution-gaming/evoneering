@@ -18,12 +18,16 @@ export class IntroContainer extends React.PureComponent {
                     if (loading || !data) return null;
 
                     const intro = data.intros[0];
+                    const longIntro = data.intros[1];
 
-                    return (
+                    return <>
                         <div className="slogan">
                             {intro.title}
                         </div>
-                    );
+                        <div className="longDescription">
+                            {longIntro.title}
+                        </div>
+                    </>
                 }}
             </Query>
         )
