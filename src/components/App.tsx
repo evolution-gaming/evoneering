@@ -10,7 +10,7 @@ import {Map} from "./Map/Map";
 import {CardContainer} from "./Card/CardContainer";
 import {IntroContainer} from "./Intro/IntroContainer";
 import ScrollableAnchor from "react-scrollable-anchor";
-import {Logo} from "./Logo/Logo";
+import { LogoEvolution } from "./Logo/LogoEvolution";
 import {initAmsterdamWidget, initMinskWidget, initRigaWidget, initTallinnWidget} from "./widget";
 import {OfficeGallery} from "./OfficeGallery/OfficeGallery";
 import "react-image-gallery/styles/css/image-gallery.css";
@@ -216,7 +216,7 @@ class App extends React.PureComponent {
                             <div className="footerContainer">
                                 <div className="contentContainer">
                                     <div className="footerLogo">
-                                        <Logo/>
+                                        <LogoEvolution />
                                     </div>
                                 </div>
                             </div>
