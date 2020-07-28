@@ -2,6 +2,9 @@ import React from "react";
 import "./App.css";
 import {TopBar} from "./TopBar/TopBar";
 import {Button, ButtonTheme} from "./Button/Button";
+import { Banner } from "./Banner/Banner";
+import bootcampImage from "./eng-bootcamp-web-banner.png";
+import bootcampImageMob from "./eng-bootcamp-web-banner-mob.png";
 import {TagContainer} from "./Tag/TagContainer";
 import {Repos} from "./Repos/Repos";
 import {HighlightInfo} from "./HighlightInfo/HighlightInfo";
@@ -100,6 +103,13 @@ class App extends React.PureComponent {
                                     </ScrollableAnchor>
                                 </div>
                             </div>
+
+                            <ScrollableAnchor id={'scalabootcamp'}>
+                                <div className="bootcampContainer">
+                                    <Banner buttonLabel="LEARN MORE" buttonLink="/scalabootcamp" bannerImage={window.innerWidth < 820 ? bootcampImageMob : bootcampImage}/>
+                                </div>
+                            </ScrollableAnchor>
+
                             <ScrollableAnchor id={'opensource'}>
                                 <div className="ossContainer">
                                     <div className="contentContainer">

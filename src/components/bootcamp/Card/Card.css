@@ -1,0 +1,92 @@
+.card-wrapper {
+    position: relative;
+    margin: auto;
+}
+
+.card-wrapper-mob {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 4rem 0 2rem 0;
+}
+
+.card-number-wrap {
+    position: absolute;
+    top: -11%;
+    border: 1px #FFF33B solid;
+    border-radius: 50%;
+    padding: 1px;
+}
+
+.card-number-wrap-mob {
+    top: 20%;
+    left: 4%;
+}
+
+.card-number {
+    background-color: #FFF33B;
+    border-radius: 50%;
+    box-shadow: 4px 3px 5px 0px #C4C4C4;
+    height: 3rem;
+    width: 3rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin: 4px;
+}
+
+.card-square {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 15rem;
+    width: 20rem;
+    border: 1px solid #CECECE;
+    border-radius: 10px;
+    box-shadow: 4px 3px 5px 0px #C4C4C4;
+    background-color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.card-square-mob {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 15rem;
+    width: 50%;
+    border: 1px solid #CECECE;
+    border-radius: 10px;
+    box-shadow: 4px 3px 5px 0px #C4C4C4;
+    background-color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.card-icon {
+    height: 4rem;
+    width: 4rem;
+    margin: 5px;
+}
+
+.card-label {
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.card-text {
+    font-size: 1.1rem;
+}
+
+.card-text-mob {
+    text-align: justify;
+    width: 100%;
+    font-size: 1rem;
+    margin-left: 23%;
+}

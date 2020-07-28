@@ -1,0 +1,28 @@
+.sticky-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #E62532;
+    height: 6rem;
+    position: sticky;
+    bottom: 0;
+    width: 100%
+}
+
+.sticky-footer-btn {
+    background-color: #E62532;
+    height: 3rem;
+    width: 10rem;
+    color: white;
+    border-radius: 4px;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+}
+
+.sticky-footer-btn a {
+    tex-decoration: none;
+    color: white;
+}

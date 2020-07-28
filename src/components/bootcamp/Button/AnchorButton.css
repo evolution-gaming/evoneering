@@ -1,0 +1,20 @@
+.anchor-button {
+    color: #FFF;
+    background-color: #E62532;
+    border-radius: 10px;
+    padding: 0.7rem 1rem;
+    border: none;
+    letter-spacing: 1px;
+    margin: 0 0 1rem 2.5rem;
+    cursor: pointer;
+    transition: transform 0.2s ease-out;
+}
+
+.anchor-button:hover {
+    transform: scale(1.1);
+    background-color: #e64040;
+}
+
+.anchor-button:focus {
+    outline: 0;
+}
