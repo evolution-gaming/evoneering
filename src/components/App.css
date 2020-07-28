@@ -45,6 +45,26 @@
     overflow: hidden;
 }
 
+.bootcampContainer {
+    width: 90%;
+    height: calc(360 / 16 * 1rem);
+    min-height: 200px;
+    margin: 2rem auto 2rem auto;
+}
+
+@media screen and (max-width: 820px) {
+    .bootcampContainer {
+        width: 95%;
+        height: calc(240 / 16 * 1rem);
+    }
+}
+
+@media (orientation: landscape) and (max-width: 820px) {
+    .bootcampContainer {
+        width: 90%
+    }
+}
+
 .slogan {
     font-size: calc(30 / 16 * 1rem);
     font-weight: 900;

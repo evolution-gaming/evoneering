@@ -1,0 +1,1 @@
+export const buttonFormLink = "https://forms.office.com/Pages/ResponsePage.aspx?id=wQpZdvo0QkKQktabXkypQvAOIxZM325Hr24Ze339n6BUMENZVlYwTVVaTjhVNlY2OEI1RjVYTEkzQy4u";

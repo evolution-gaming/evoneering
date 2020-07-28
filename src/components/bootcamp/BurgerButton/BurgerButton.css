@@ -1,0 +1,13 @@
+.burger-button {
+    margin: 1rem 1rem 1rem 0;
+    border: none;
+    background-color: white;
+    background-repeat: no-repeat;
+    height: 40px;
+    width: 40px;
+    background-image: url('data:image/svg+xml;utf8, <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M 5 15 L 35 15 M 5 25 L 35 25 M 5 35 L 35 35" stroke-width="5" stroke="%23666" stroke-linecap="round"/></svg>');
+}
+
+.burger-button:focus {
+    outline: 0;
+}

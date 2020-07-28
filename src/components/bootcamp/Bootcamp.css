@@ -1,0 +1,164 @@
+
+html {
+    overflow-x: hidden;
+}
+
+@media (max-width: 1600px) {
+    html {
+        font-size: 12px
+    }
+}
+
+@media (max-width: 1200px) {
+    html {
+        font-size: 10px
+    }
+}
+
+.wrapper {
+    overflow-x: hidden;
+}
+
+.card-arrow {
+    background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 65 50" xmlns="http://www.w3.org/2000/svg"><path d="M 10 25 L 50 25" fill="transparent" stroke="%23CECECE" stroke-width="2"/><polygon points="50,30 50,20 65,25" fill="%23CECECE"/></svg>');
+    background-repeat: no-repeat;
+    height: 3rem;
+    width: 3rem;
+}
+
+.card-arrow-mob {
+    background-image: url('data:image/svg+xml;utf8, <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg"><path d= "M 25 5 L 25 40" fill="transparent" stroke="%23CECECE" stroke-width="2" /><polygon points=" 20,40 30,40 25,50" fill="%23CECECE"/></svg>');
+    background-repeat: no-repeat;
+    height: 3rem;
+    width: 3rem;
+    margin: auto;
+}
+
+.arrowLeft { 
+    width: 10rem;
+    height: 10rem;
+    margin: 7% 0 0 30%;
+    position: absolute;
+    left: 3%;
+    top: 30%;
+    float: left;
+    background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 230 220" xmlns="http://www.w3.org/2000/svg"><path d= "M 175 75 L 115 75 L 115 20 L 10 107.5 L 115 195 L 115 140 L 220 140" fill="transparent" stroke="%23ebebeb" stroke-width="18" opacity="0.6" /></svg>');
+	background-repeat: no-repeat;
+}
+
+.arrowRight {
+    width: 10rem;
+    height: 10rem;
+    margin: 8% 30% 0 0;
+    position: absolute;
+    left: 59%;
+    float: right;
+    background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 230 220" xmlns="http://www.w3.org/2000/svg"><path d= "M 50 75 L 115 75 L 115 20 L 200 107.5 L 115 195 L 115 140 L 0 140" fill="transparent" stroke="%23ebebeb" stroke-width="18" opacity="0.6" /></svg>');
+	background-repeat: no-repeat;
+}
+
+.bckg-visual {
+    background-repeat: no-repeat;
+    position: absolute;
+}
+
+#bckg1 {
+    top: 100%;
+    left: 22%;
+    height: 8rem;
+    width: 8rem;
+    background-image: url('data:image/svg+xml;utf8, <svg version="1.1" id="Isolation_Mode" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 139.2 109.9" style="enable-background:new 0 0 139.2 109.9;" xml:space="preserve"><style type="text/css">.st0{fill:%23595A5C;}</style><g><g><g><path class="st0" d="M126,20.9L95.1,3L95,3.1L50.2,28.9v47.3h0.5v-47L95.1,3.6l30.8,17.8C125.9,21.2,125.9,21.1,126,20.9z"/></g></g><polygon class="st0" points="83.1,78.6 38.4,104.5 38.3,104.5 7.8,86.9 7.8,86.4 38.3,103.9 82.6,78.3 82.6,29.4 83.1,29.4 "/><polygon class="st0" points="47.2,79.5 47.2,75.7 50.5,73.8 53.8,75.7 53.8,79.5 50.5,81.4 "/></g></svg> ');
+}
+
+#bckg2 {
+    left: 83%;
+    height: 3rem;
+    width: 3rem;
+    top: 110%;
+    background-image: url('data:image/svg+xml;utf8, <svg version="1.1" id="Isolation_Mode" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 10.4 12" style="enable-background:new 0 0 10.4 12;" xml:space="preserve"><style type="text/css">.st0{fill:%23FFF33B;}</style><polygon class="st0" points="10.1,8.7 10.1,3.1 5.2,0.3 0.3,3.1 0.3,8.7 5.2,11.6 "/></svg> ');
+}
+
+#bckg2::after {
+    content: "";
+    position: absolute;
+    background-repeat: no-repeat;
+    left: -60%;
+    height: 1rem;
+    width: 1rem;
+    top: -25%;
+    background-image: url('data:image/svg+xml;utf8, <svg version="1.1" id="Isolation_Mode" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 10.4 12" style="enable-background:new 0 0 10.4 12;" xml:space="preserve"><style type="text/css">.st0{fill:%23FFF33B;}</style><polygon class="st0" points="10.1,8.7 10.1,3.1 5.2,0.3 0.3,3.1 0.3,8.7 5.2,11.6 "/></svg> ');
+
+}
+
+#bckg3 {
+    height: 5rem;
+    width: 5rem;
+    left: 73%;
+    top: 90%;
+    z-index: -1;
+    transform: rotate(180deg);
+    background-image: url('data:image/svg+xml;utf8, <svg version="1.1" id="Isolation_Mode" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 68.5 105.4" style="enable-background:new 0 0 68.5 105.4;" xml:space="preserve"><style type="text/css">.st0{fill:%23595A5C;}</style><g><polygon class="st0" points="15.6,7.9 15.6,14.1 20.9,17.2 26.2,14.1 26.2,7.9 20.9,4.8 "/><polygon class="st0" points="60.4,99 21.4,76.5 21.4,16.3 20.6,16.3 20.6,77 60.4,99.9 "/></g></svg> ');
+}
+
+#bckg4 {
+    top: 105%;
+    left: 18%;;
+    height: calc(2rem + 5%);
+    width: calc(2rem + 5%);
+    z-index: -2;
+    background-image: url('data:image/svg+xml;utf8, <svg version="1.1" id="Isolation_Mode" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 136.2 42.1" style="enable-background:new 0 0 136.2 42.1;" xml:space="preserve"><style type="text/css">.st0{fill:%23595A5C;}</style><g><polygon class="st0" points="67.8,42 68,42.1 132.6,4.8 132.6,3.9 68,41.2 7.5,6.2 7.5,7.2 "/></g><polygon class="st0" points="0,2.4 0,7.2 4.2,9.6 8.3,7.2 8.3,2.4 4.2,0 "/><polygon class="st0" points="132.1,2.3 132.1,4.7 134.1,5.8 136.2,4.7 136.2,2.3 134.1,1.1 "/></svg> ');
+}
+
+#bckg5 {
+    top: 90%;
+    left: 82%;
+    height: 4rem;
+    width: 4rem;
+    background-image: url('data:image/svg+xml;utf8, <svg version="1.1" id="Isolation_Mode" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 113.1 130.6" style="enable-background:new 0 0 113.1 130.6;" xml:space="preserve"><style type="text/css">.st0{fill:%23595A5C;}</style><polygon class="st0" points="57.2,0 56.6,-0.4 0.6,31.9 0,32.3 0,97.6 57.2,130.6 57.2,127.6 2.6,96.1 2.6,33.8 56.6,2.6 110.5,33.8 110.5,96.1 113.1,97.6 113.1,32.3 "/></svg> ');
+}
+
+#bckg6 {
+    transform: scale(1.5);
+    left: 81%;
+    top: 96%;
+    height: 4rem;
+    width: 4rem;
+    background-image: url('data:image/svg+xml;utf8, <svg version="1.1" id="Isolation_Mode" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 134.7 58.5" style="enable-background:new 0 0 134.7 58.5;" xml:space="preserve"><style type="text/css">.st0{fill:%23FFF33B;}</style><polygon class="st0" points="127.7,38.3 95.3,57 8.7,7 8.7,8.5 95,58.3 95.3,58.5 127.7,39.8 "/><polygon class="st0" points="9.8,8.5 9.8,2.8 4.9,0 0,2.8 0,8.5 4.9,11.3 "/><polygon class="st0" points="130.8,41.8 134.6,39.8 134.7,35.5 131.1,33.2 127.3,35.2 127.1,39.5 "/></svg>');
+}
+
+#bckg7 {
+    left: 18%;
+    height: 5rem;
+    width: 5rem;
+    background-image: url('data:image/svg+xml;utf8, <svg version="1.1" id="Isolation_Mode" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 149.4 126.3" style="enable-background:new 0 0 149.4 126.3;" xml:space="preserve"><style type="text/css">.st0{fill:%23595A5C;}</style><g><polygon class="st0" points="77.1,97.7 127.4,68.7 127.4,67.8 77.1,96.8 27.6,68.2 27.6,69.1 "/><g><polygon class="st0" points="149.2,84.7 149.4,84.6 149.4,53.4 148.6,53.4 148.6,84.1 77.2,125.4 5.7,84.1 5.7,8.4 4.9,8.4 4.9,84.6 77,126.2 77.2,126.3 "/></g><polygon class="st0" points="0,3.1 0,9.2 5.3,12.3 10.7,9.2 10.7,3.1 5.3,0 "/><polygon class="st0" points="24.2,66.8 24.2,69.2 26.3,70.4 28.4,69.2 28.4,66.8 26.3,65.6 "/><polygon class="st0" points="126.3,65.3 126.3,68.8 129.4,70.6 132.5,68.8 132.5,65.3 129.4,63.5 "/></g></svg>');
+}
+
+#bckg8 {
+    top: 72%;
+    left: 75%;
+    height: 4rem;
+    width: 4rem;
+    background-image: url('data:image/svg+xml;utf8, <svg version="1.1" id="Isolation_Mode" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 63.2 40.9" style="enable-background:new 0 0 63.2 40.9;" xml:space="preserve"><style type="text/css">.st0{fill:%23595A5C;}</style><g><polygon class="st0" points="6.5,7 6.8,6.8 57.1,35.8 57.1,34.8 6.8,5.8 6.5,6 "/><polygon class="st0" points="56.3,34.9 56.3,38.9 59.7,40.9 63.2,38.9 63.2,34.9 59.7,32.9 "/><polygon class="st0" points="0,2.3 0,6.9 4,9.1 7.9,6.9 7.9,2.3 4,0 "/></g></svg>');
+}
+
+#bckg9 {
+    left: 19%;
+    height: 6rem;
+    width: 6rem;
+    background-image: url('data:image/svg+xml;utf8, <svg version="1.1" id="Isolation_Mode" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 140.8 92.3" style="enable-background:new 0 0 140.8 92.3;" xml:space="preserve"><style type="text/css">.st0{fill:%23595A5C;}</style><polygon class="st0" points="39.7,0 3.6,20.8 3.6,21.5 39.7,0.7 75.3,21.2 75.3,20.6 "/><polygon class="st0" points="53.6,62.4 105.4,92.3 105.5,92.3 140.8,72 140.8,71.3 105.5,91.7 54.2,62 54.2,8.5 53.6,8.2 "/><polygon class="st0" points="77.8,22.2 77.8,20.5 76.3,19.6 74.8,20.5 74.8,22.2 76.3,23.1 "/><polygon class="st0" points="4.4,23.3 4.4,20.8 2.2,19.5 0,20.8 0,23.3 2.2,24.6 "/></svg>');
+}
+
+#bckg10 {
+    top: 98%;
+    left: 15%;
+    z-index: -1;
+    height: 4rem;
+    width: 4rem;
+    background-image: url('data:image/svg+xml;utf8, <svg version="1.1" id="Isolation_Mode" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 149.4 126.3" style="enable-background:new 0 0 149.4 126.3;" xml:space="preserve"><style type="text/css">.st0{fill:%23FFF33B;}</style><g><polygon class="st0" points="149.2,84.7 149.4,84.6 149.4,53.4 148.6,53.4 148.6,84.1 77.2,125.4 5.7,84.1 5.7,8.4 4.9,8.4 4.9,84.6 77,126.2 77.2,126.3 "/></g><polygon class="st0" points="0,3.1 0,9.2 5.3,12.3 10.7,9.2 10.7,3.1 5.3,0 "/></svg>');
+}
+
+@media (max-width: 820px) {
+    .bckg-visual {
+        display: none;
+    }
+}
