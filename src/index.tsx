@@ -20,7 +20,6 @@ const AppContainer = () => (
             <ApolloProvider client={client}>
                 <Route path="/" component={App} />
             </ApolloProvider>
-            <Route path="/" component={App} />
             <Route exact path="/scalabootcamp" component={Bootcamp} />
         </Switch>
     </BrowserRouter>
