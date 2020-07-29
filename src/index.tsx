@@ -15,14 +15,15 @@ const client = new ApolloClient({
 });
 
 const AppContainer = () => (
+
     <BrowserRouter>
         <Switch>
             <ApolloProvider client={client}>
-                <Route path="/" component={App} />
-            </ApolloProvider>
             <Route exact path="/scalabootcamp" component={Bootcamp} />
+            <Route path="/" component={App} />
+            </ApolloProvider>
         </Switch>
-    </BrowserRouter>
+    </BrowserRouter >
 );
 
 ReactDOM.render(<AppContainer />, document.getElementById("root"));
