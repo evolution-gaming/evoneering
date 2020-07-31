@@ -106,7 +106,7 @@ class App extends React.PureComponent {
 
                             <ScrollableAnchor id={'scalabootcamp'}>
                                 <div className="bootcampContainer">
-                                    <Banner buttonLabel="LEARN MORE" buttonLink="/scalabootcamp" bannerImage={window.innerWidth < 820 ? bootcampImageMob : bootcampImage}/>
+                                    <Banner buttonLabel="LEARN MORE" buttonLink="https://scala-bootcamp.evolutiongaming.com/" bannerImage={window.innerWidth < 820 ? bootcampImageMob : bootcampImage}/>
                                 </div>
                             </ScrollableAnchor>
 

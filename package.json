@@ -15,8 +15,6 @@
     "react-grid-gallery": "^0.5.5",
     "react-image-gallery": "^0.8.18",
     "react-markdown": "^4.1.0",
-    "react-router": "^5.2.0",
-    "react-router-dom": "^5.2.0",
     "react-scripts": "2.1.5",
     "react-scrollable-anchor": "^0.6.1",
     "react-test-renderer": "^16.8.1",
