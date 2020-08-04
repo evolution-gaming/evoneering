@@ -3,7 +3,7 @@ import "./App.css";
 import {TopBar} from "./TopBar/TopBar";
 import {Button, ButtonTheme} from "./Button/Button";
 import { Banner } from "./Banner/Banner";
-import bootcampImage from "./eng-bootcamp-web-banner.png";
+import bootcampImage from "./eng-bootcamp-web-banner.jpg";
 import bootcampImageMob from "./eng-bootcamp-web-banner-mob.png";
 import {TagContainer} from "./Tag/TagContainer";
 import {Repos} from "./Repos/Repos";
