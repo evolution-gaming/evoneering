@@ -9,6 +9,8 @@ interface BannerProps {
     customStyles?: React.CSSProperties;
 }
 
+// Banner Sizing is applied with wrapping container from App.css - .bannerGenericContainer
+
 export const Banner = (props: BannerProps): JSX.Element => {
 
     const { buttonLabel, buttonLink, bannerImage, customStyles } = props;
