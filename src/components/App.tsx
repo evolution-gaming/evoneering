@@ -20,6 +20,9 @@ import gql from "graphql-tag";
 import Query from "react-apollo/Query";
 import ReactMarkdown from "react-markdown";
 
+import bootcampImage from "../assets/images/eng-bootcamp-web-banner-closed-1600x400.png";
+import bootcampImageMob from "../assets/images/eng-bootcamp-web-banner-closed-834x355.png";
+
 const QUERY = gql`
 {
   banners {
@@ -101,6 +104,12 @@ class App extends React.PureComponent {
                                     </ScrollableAnchor>
                                 </div>
                             </div>
+
+                            <ScrollableAnchor id={'scalabootcamp'}>
+                                <div className="bannerGenericContainer">
+                                    <Banner buttonLabel="LEARN MORE" buttonLink="https://scala-bootcamp.evolutiongaming.com/" bannerImage={window.innerWidth < 820 ? bootcampImageMob : bootcampImage}/>
+                                </div>
+                            </ScrollableAnchor>
 
                             <ScrollableAnchor id={'opensource'}>
                                 <div className="ossContainer">
