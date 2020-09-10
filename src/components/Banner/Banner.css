@@ -9,8 +9,8 @@
 }
 
 .bannerButton {
-    top: 82%;
-    left: 20%;
+    top: 65%;
+    left: 8.5%;
     position: absolute;
     color: #FFF;
     background-color: #E62532;
@@ -32,24 +32,48 @@
     outline: 0;
 }
 
-@media (max-width: 820px) {
+@media (max-width: 375px) {
     .bannerButton {
-        top: 78%;
-        left: 30%;
+        top: 55%;
+        left: 0%;
     }
+
     .bannerMain {
         background-size: contain;
         background-position: 10%;
+        min-height: 100px;
+        height: 76%;
     }
 }
 
 @media (max-width: 820px) and (orientation: landscape) {
     .bannerMain {
         min-height: 200px;
-        background-size: contain;
-        background-position: center;
+        background-size: cover;
+        background-position: 0 5%;
     }
+
     .bannerButton {
-        left: 40%;
+        left: 5%;
+        top: 75%;
+    }
+}
+
+@media (min-width: 376px) and (max-width: 494px) {
+    .bannerMain {
+        background-size: contain;
+        height: 84%;
+    }
+
+    .bannerButton {
+        top: 50%;
+        left: 1%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 768px) {
+    .bannerButton {
+        top: 78%;
+        left: 5%;
     }
 }
