@@ -1,3 +1,5 @@
+> **This repository is archived and no longer maintained.** It is kept for historical reference only.
+
 <h1 align="center">Evolution Gaming Engineering</h1>
 
 <p align="center" style="font-size: 30px;">
